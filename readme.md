@@ -1,3 +1,3 @@
-<style="text-align: center;">
+<p align="center">
     # Functional Programming in C#
-</style>
+</p>
