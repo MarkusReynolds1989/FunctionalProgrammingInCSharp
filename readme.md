@@ -10,5 +10,6 @@ Topics covered will include:
 * Anonymous Functions
 * Applicative Programming
 * Immutable Data
+* Setting up and using Jupyter notebooks
 * Data Science
 * Machine Learning
