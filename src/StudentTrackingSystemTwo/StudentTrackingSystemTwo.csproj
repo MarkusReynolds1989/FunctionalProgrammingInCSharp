@@ -12,4 +12,8 @@
       <PackageReference Include="SQLite" Version="3.13.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\GlobalHelpers\GlobalHelpers.csproj" />
+    </ItemGroup>
+
 </Project>

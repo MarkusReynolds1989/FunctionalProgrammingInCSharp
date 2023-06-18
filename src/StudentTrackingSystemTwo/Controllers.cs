@@ -7,6 +7,9 @@ public static class Controllers
 {
     public static class GradeController
     {
+        // Here we are forced to insert into a DB as a side effect. 
+        // One thing we could do to make this less error prone is to wrap this whole event into a result type.
+        // Then, once we know it fails we would have a result bubble back up to the user.
         public static async Task<bool> InsertGrade(Models.Grade grade)
         {
             try
@@ -14,7 +17,7 @@ public static class Controllers
                 await using var connection = new SqliteConnection("");
                 await connection.OpenAsync();
 
-                var result = await connection.ExecuteAsync(
+                var rowCount = await connection.ExecuteAsync(
                     @"insert into grade(StudentId, Gradevalue, Date) values (@StudentId, @GradeValue, @Date)",
                     new
                     {
